@@ -8,11 +8,11 @@ export default function Task({ navigation }) {
     const [task, setTask] = useState([]);
    
     function deleteTask(id) {
-      database.collection("Tasks").doc(id).delete();
+      database.collection("TB_Tasks").doc(id).delete();
     }
    
     useEffect(() => {
-      database.collection("Tasks").onSnapshot((query) => {
+      database.collection("TB_Tasks").onSnapshot((query) => {
         const list = [];
         query.forEach((doc) => {
           list.push({ ...doc.data(), id: doc.id });
@@ -32,11 +32,11 @@ export default function Task({ navigation }) {
                 <TouchableOpacity
                   style={styles.deleteTask}
                   onPress={() => {
-                    deleteTask(item.id)
+                    deleteTask(item.id) 
                   }}
                 >
                 <FontAwesome
-                  name="star"
+                  name="trash"
                   size={23}
                   color="#F92e6A"
                 >
@@ -47,13 +47,12 @@ export default function Task({ navigation }) {
                   onPress={()=>
                     navigation.navigate("Details",{
                       id: item.id,
-                      description: item.description,
+                      descricao: item.descricao,
                     })
                   }
                 >
-                {item.description}  
-                </Text>  
-     
+                  {item.descricao}  
+                </Text>       
               </View>
               )
             }}
