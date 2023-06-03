@@ -21,13 +21,25 @@ const styles = StyleSheet.create({
       fontWeight: '400',
       marginTop: 10,
   },  
+  save: {
+    flexDirection: "row",
+    justifyContent: "center",
+  },
+  inputIcon: {
+    marginRight: 10
+  },
   button: {
     top: 10,
-    width: '30%',
+    width: '60%',
     backgroundColor: '#0054FF',
     paddingVertical: 10,
     paddingHorizontal: 15,
     borderRadius: 10, 
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 10,
+    paddingLeft: 10,
   },
   buttonText: {
     color: '#FFFFFF',
@@ -133,7 +145,8 @@ const styles = StyleSheet.create({
   iconButton: {
     fontSize: 30,
     color: "#fff",
-  },
+  }
+  
 });
 
 export default styles;

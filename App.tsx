@@ -6,8 +6,17 @@ import NewTask from "./src/pages/NewTask/";
 import Filter from "./src/pages/Filter/";
 import AuthenticationLogin from "./src/pages/auth/Login/";
 import AuthenticationCreate from "./src/pages/auth/Create/";
+import * as Notifications from 'expo-notifications';
 
 const Stack = createStackNavigator();
+
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: true,
+    shouldSetBadge: true,
+  }),
+});
 
 export default function App() {
   return (

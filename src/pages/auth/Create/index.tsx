@@ -17,7 +17,7 @@ export default function AuthenticationCreate({ navigation }) {
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then(() => {
-        navigation.navigate("Task");
+        navigation.navigate("AuthenticationLogin");
       })
       .catch((error) => {
         setErrorMessage("Dados Indefinidos!!");

@@ -32,16 +32,30 @@ export default function Filter({ navigation }) {
   }
 
   function deleteTask(id) {
-    const deleteTasks = database.collection("TB_Tasks").doc(id).delete();
-    setFilteredTasks(deleteTasks);
+    database.collection("TB_Tasks").doc(id).delete().then(() => {
+      filterTask();
+    });
   }
 
   const filterTask = () => {
     const filteredTasks = tasks.filter((task) => task.empresa === company);
 
+    setFilteredTasks(filteredTasks);
+  };
+
+  const filterCompletedTasks = () => {
+    const completedTasks = tasks.filter((task) => task.isCompleted);
+
+    setFilteredTasks(completedTasks);
+  };
+
+  const filterIncompletedTasks = () => {
+    const filteredTasks = tasks.filter((task) => !task.isCompleted);
+  
     // Atualizar o estado com as tarefas filtradas
     setFilteredTasks(filteredTasks);
   };
+  
 
   return (
     <View style={styles.container}>
@@ -61,6 +75,26 @@ export default function Filter({ navigation }) {
       </View>
 
       <Text>{"\n"}</Text>
+
+      <Text style={styles.label}>Filtre por status da tarefa:</Text>
+      <View style={styles.filterContainer}>
+        <TouchableOpacity style={styles.buttonFilterFinish} onPress={filterCompletedTasks}>
+          <Text style={styles.iconButton}>
+            <Text style={styles.btnText}>Finalizada</Text>
+          </Text>
+        </TouchableOpacity>
+
+        <View style={styles.boxFilterNot}>
+          <TouchableOpacity style={styles.buttonFilterNot} onPress={filterIncompletedTasks}>
+            <Text style={styles.iconButton}>
+              <Text style={styles.btnTextNot}>Pendente</Text>
+            </Text>
+          </TouchableOpacity> 
+        </View>
+      </View>
+
+
+      <Text>{"\n","\n"}</Text>
       
       <View style={styles.save}>
         <TouchableOpacity style={styles.buttonNewTask} onPress={filterTask}>
@@ -72,7 +106,6 @@ export default function Filter({ navigation }) {
 
       <Text>{"\n","\n"}</Text>
 
-      {/* Renderizar as tarefas filtradas */}
       {filteredTasks.length > 0 && (
         <View>
           <Text style={styles.label}>Tarefas filtradas:</Text>

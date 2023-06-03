@@ -127,22 +127,22 @@ const styles = StyleSheet.create({
     color: "#888",
   },
   button: {
-      top: 20,
-      width: '30%',
-      backgroundColor: '#0054FF',
-      paddingVertical: 10,
-      paddingHorizontal: 15,
-      borderRadius: 10,
+    top: 20,
+    width: '30%',
+    backgroundColor: '#0054FF',
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderRadius: 10,
   },
   buttonText: {
-      color: '#FFFFFF',
-      fontSize: 20,
-      fontWeight: 'bold',
-      textAlign: 'center',
+    color: '#FFFFFF',
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },  
   buttonNewTask: {    
     height: 50,
-    width: 150,
+    width: 250,
     top: 20,
     backgroundColor: '#0054FF',
     paddingVertical: 10,
@@ -150,6 +150,42 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
+  },  
+  filterContainer: {
+    flexDirection: "row",
+    justifyContent: "flex-start",
+  },
+  save: {
+    flexDirection: "row",
+    justifyContent: "center",
+  },
+  buttonFilterFinish: {    
+    height: 30,
+    width: 80,
+    top: 20,
+    backgroundColor: '#006064',
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  boxFilterNot: {    
+    marginLeft: 10
+  }, 
+  buttonFilterNot: {    
+    height: 30,
+    width: 80,
+    top: 20,
+    backgroundColor: '#FFF',
+    borderColor: '#006064',
+    borderWidth: 1,
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  btnTextNot: {
+    color: '#006064',
+    fontSize: 14,
+    fontWeight: 'bold',
   }
 });
 
