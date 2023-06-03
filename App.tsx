@@ -3,7 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Task from "./src/pages/Task/";
 import NewTask from "./src/pages/NewTask/";
-import Details from "./src/pages/Details/";
+import Filter from "./src/pages/Filter/";
 import AuthenticationLogin from "./src/pages/auth/Login/";
 import AuthenticationCreate from "./src/pages/auth/Create/";
 
@@ -17,36 +17,27 @@ export default function App() {
           name="AuthenticationLogin"
           component={AuthenticationLogin}
           options={{
-            headerTintColor: "#f92e6a"
+            headerShown: false
           }}
         />
         <Stack.Screen 
           name="AuthenticationCreate"
           component={AuthenticationCreate}
           options={{
-            headerTintColor: "#f92e6a"
+            headerShown: false
           }}
         />
         <Stack.Screen 
           name="Task"
           component={Task}
-          options={{
-            headerTintColor: "#f92e6a"
-          }}
         />
         <Stack.Screen 
           name="New Task"
           component={NewTask}
-          options={{
-            headerTintColor: "#f92e6a"
-          }}
         />
         <Stack.Screen 
-          name="Details"
-          component={Details}
-          options={{
-            headerTintColor: "#f92e6a"
-          }}
+          name="Filtrar"
+          component={Filter}
         />
       </Stack.Navigator>
     </NavigationContainer>

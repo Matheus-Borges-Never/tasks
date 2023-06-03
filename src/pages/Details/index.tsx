@@ -57,5 +57,62 @@ export default function Details({ navigation, route }) {
         <Text style={styles.iconButton}>Save</Text>
       </TouchableOpacity>
     </View>
+
+    
+    // <View style={styles.container}>
+    //   <FlatList
+    //     showsVerticalScrollIndicator={false}
+    //     data={task}
+    //     renderItem={({ item }) => {
+    //       return (
+    //         <View style={styles.Tasks}>
+    //           <TouchableOpacity
+    //             style={[
+    //               styles.checkTask,
+    //               { backgroundColor: item.isCompleted ? "#43C46D" : "#fff" },
+    //             ]}
+    //             onPress={() => {
+    //               toggleCompletion(item.id, item.isCompleted);
+    //             }}
+    //           >
+    //             {item.isCompleted && (
+    //               <FontAwesome name="check" size={16} color="#fff" />
+    //             )}
+    //           </TouchableOpacity>
+    //           <View style={styles.taskDetails}>
+    //             <Text
+    //               style={styles.DescriptionTask}
+    //               onPress={() =>
+    //                 navigation.navigate("Details", {
+    //                   id: item.id,
+    //                   descricao: item.descricao,
+    //                 })
+    //               }
+    //             >
+    //               {item.descricao}
+    //             </Text> 
+    //             <Text style={styles.dateText}>{item.data}</Text>
+    //             <Text style={styles.timeText}>{item.hora}</Text>
+    //             <Text style={styles.companyText}>{item.empresa}</Text>
+    //           </View>               
+    //           <TouchableOpacity
+    //             style={styles.deleteTask}
+    //             onPress={() => {
+    //               deleteTask(item.id);
+    //             }}
+    //           >
+    //             <FontAwesome name="trash" size={23} color="red" />
+    //           </TouchableOpacity>
+    //         </View>
+    //       );
+    //     }}
+    //   />
+    //   <TouchableOpacity
+    //     style={styles.buttonNewTask}
+    //     onPress={() => navigation.navigate("New Task")}
+    //   >
+    //     <Text style={styles.iconButton}>+</Text>
+    //   </TouchableOpacity>
+    // </View>
   );
 }

@@ -3,41 +3,109 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    justifyContent: "center",
+    bottom: 60,
+    paddingLeft: 25,
+    paddingRight: 25,
+  },
+  title: {
+    fontSize: 46,
+    fontWeight: '800',
+    color: '#0054FF',
+    textAlign: "center",
+  },
+  description: {
+      fontSize: 20,
+      fontWeight: '500',
+  },
+  description2: {
+      fontSize: 16,
+      fontWeight: '400',
   },
   label: {
-    width: "90%",
-    marginTop: 20,
-    fontSize: 16,
-    marginLeft: 20,
-    color: "#F92E6A",
+    color: "#000",
+    marginBottom: 10,
   },
-  input: {
-    width: "90%",
-    marginTop: 10,
-    padding: 10,
-    height: 50,
-    borderBottomWidth: 1,
-    borderBottomColor: "#F92E6A",
-    marginLeft: "auto",
-    marginRight: "auto",
-  },
-  buttonNewTask: {
-    width: 60,
-    height: 60,
-    position: "absolute",
-    bottom: 30,
-    left: 20,
-    backgroundColor: "#F92e6a",
-    borderRadius: 50,
+  inputContainer: {
+    flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
+    borderWidth: 1,
+    borderColor: "#ccc",
+    borderRadius: 10,
+    paddingLeft: 10,
+  },
+  inputIcon: {
+    marginRight: 10
+  },
+  input: {
+    flex: 1,
+    height: 40,
+    color: "#000",
   },
   iconButton: {
     color: "#ffffff",
     fontSize: 16,
     fontWeight: "bold",
   },
+  datePicker: {
+    height: 120,
+    marginTop: -10
+  },
+  ios: {
+    flexDirection: "row",
+    justifyContent: "space-around"
+  },
+  button: {
+      top: 20,
+      width: '30%',
+      backgroundColor: '#0054FF',
+      paddingVertical: 10,
+      paddingHorizontal: 15,
+      borderRadius: 10,
+  },
+  buttonText: {
+      color: '#FFFFFF',
+      fontSize: 20,
+      fontWeight: 'bold',
+      textAlign: 'center',
+  },
+  buttonCancelar: {
+      top: 20,
+      width: '30%',
+      backgroundColor: '#FFFFFF',
+      paddingVertical: 10,
+      paddingHorizontal: 15,
+      borderRadius: 10,
+  },
+  buttonTextCancelar: {
+      color: '#0054FF',
+      fontSize: 20,
+      fontWeight: 'bold',
+      textAlign: 'center',
+  },
+  save: {    
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  saveIcon: {
+    marginRight: 10,
+  },
+  saveText: {
+    marginLeft: 10,
+  },
+  
+  buttonNewTask: {    
+    height: 50,
+    width: 150,
+    top: 20,
+    backgroundColor: '#0054FF',
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
+  }
 });
 
 export default styles;

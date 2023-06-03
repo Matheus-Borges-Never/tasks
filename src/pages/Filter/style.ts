@@ -3,37 +3,44 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
-    backgroundColor: "#fff",
+    justifyContent: "center",
+    bottom: 60,
+    paddingLeft: 25,
+    paddingRight: 25,
   },
   title: {
-    fontSize: 46,
+    fontSize: 36,
     fontWeight: '800',
-    color: '#0054FF',
-    textAlign: "center",
+    color: '#000',
   },
-  subTitle: {
-      fontSize: 24,
+  description: {
+      fontSize: 20,
       fontWeight: '500',
   },
-  date: {
-      fontSize: 20,
+  description2: {
+      fontSize: 16,
       fontWeight: '400',
-      marginTop: 10,
-  },  
-  button: {
-    top: 10,
-    width: '30%',
-    backgroundColor: '#0054FF',
-    paddingVertical: 10,
-    paddingHorizontal: 15,
-    borderRadius: 10, 
   },
-  buttonText: {
-    color: '#FFFFFF',
-    fontSize: 20,
-    fontWeight: 'bold',
-    textAlign: 'center',
+  label: {
+    color: "#000",
+    marginBottom: 10,
+  },
+  inputContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: "#ccc",
+    borderRadius: 10,
+    paddingLeft: 10,
+  },
+  inputIcon: {
+    marginRight: 10
+  },
+  input: {
+    flex: 1,
+    height: 40,
+    color: "#000",
   },
   card: {
     backgroundColor: '#fff',
@@ -119,21 +126,31 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: "#888",
   },
-  buttonNewTask: {
-    position: "absolute",
-    bottom: 20,
-    right: 20,
-    width: 60,
-    height: 60,
-    borderRadius: 30,
-    backgroundColor: "#007bff",
+  button: {
+      top: 20,
+      width: '30%',
+      backgroundColor: '#0054FF',
+      paddingVertical: 10,
+      paddingHorizontal: 15,
+      borderRadius: 10,
+  },
+  buttonText: {
+      color: '#FFFFFF',
+      fontSize: 20,
+      fontWeight: 'bold',
+      textAlign: 'center',
+  },  
+  buttonNewTask: {    
+    height: 50,
+    width: 150,
+    top: 20,
+    backgroundColor: '#0054FF',
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
-  },
-  iconButton: {
-    fontSize: 30,
-    color: "#fff",
-  },
+  }
 });
 
 export default styles;

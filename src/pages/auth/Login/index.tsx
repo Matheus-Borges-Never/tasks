@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, TextInput, Button, StyleSheet, Text } from "react-native";
+import { View, TextInput, Button, StyleSheet, Text, TouchableOpacity } from "react-native";
 import database from "../../../../config/firebaseconfig.ts";
 import styles from "./style.ts";
 import { FontAwesome } from "@expo/vector-icons";
@@ -26,6 +26,13 @@ export default function AuthenticationLogin({ navigation }) {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.title}>
+        Task
+      </Text>
+      <Text style={styles.description}>
+        Olá, que bom te ver de novo.{'\n'}
+        Vamos começar?
+      </Text>
       {errorMessage ? <Text>{errorMessage}</Text> : null}
       <TextInput
         style={styles.input}
@@ -38,8 +45,10 @@ export default function AuthenticationLogin({ navigation }) {
         secureTextEntry
         onChangeText={(text) => setPassword(text)}
       />
-      <Button title="Login" onPress={handleLogin} />
-      <Text style={styles.link} onPress={() => navigation.navigate("Details")}>
+      <TouchableOpacity style={styles.button} onPress={handleLogin}>
+        <Text style={styles.buttonText}>Login</Text>
+      </TouchableOpacity>
+      <Text style={styles.link} onPress={() => navigation.navigate("AuthenticationCreate")}>
         Criar conta
       </Text>
     </View>
